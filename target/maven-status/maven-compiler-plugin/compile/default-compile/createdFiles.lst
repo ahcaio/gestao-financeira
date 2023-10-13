@@ -1,0 +1,8 @@
+br/senac/go/resource/ContaResource.class
+br/senac/go/resource/PessoaResource.class
+br/senac/go/interfaces/GenericOperations.class
+br/senac/go/interfaces/IResource.class
+br/senac/go/model/Conta.class
+br/senac/go/model/Pessoa.class
+br/senac/go/model/Carteira.class
+br/senac/go/App.class

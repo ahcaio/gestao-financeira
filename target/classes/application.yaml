@@ -1,0 +1,57 @@
+project:
+  name: 'gestao-financeira'
+  version: '1.0-SNAPSHOT'
+  description: 'Projeto de examplo para prática do apache maven'
+info:
+  build:
+    artifact: "gestao-financeira"
+    name: "gestao-financeira"
+    description: 'Projeto de examplo para prática do apache maven'
+    version: '1.0-SNAPSHOT'
+
+#spring.banner.charset=UTF-8
+#spring.banner.location=classpath:banner.txt
+
+#application:
+  #title: 'gestao-financeira'
+  #version: '1.0-SNAPSHOT'
+
+application:
+  title: ${project.name}
+  version: ${project.version}
+
+spring:
+  output:
+    ansi:
+      enabled: ${SPRING_OUTPUT_ANSI_ENABLE}
+  banner:
+    charset: ${SPRING_BANNER_CHARSET}
+    location: ${SPRING_BANNER_LOCATION}
+
+  jpa:
+    open-in-view: false
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  h2:
+    console:
+      enabled: true
+  datasource:
+    username: sa
+    url: jdbc:h2:mem:testdb
+    driverClassName: org.h2.Driver
+    password: ''
+
+#Logging
+logging:
+  level:
+    br.senac.go: debug
+    org.springframework.web: info
+
+resource:
+  pessoa-post: Método responsável por criar uma nova pessoa.
+  pessoa-put: Método responsável por atualizar todo os dados de uma pessoa.
+  pessoa-patch: Método responsável por atualizar parte de um objeto pessoa.
+  pessoa-delete: Método responsável por deletetar o registro pessoa.
+  pessoa-delete-by-id: Método responsável por deletar um registro por identificador.
